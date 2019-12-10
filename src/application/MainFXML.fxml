@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <center>
-      <Canvas fx:id="canvas" height="512.0" width="512.0" BorderPane.alignment="BOTTOM_CENTER" />
+      <Canvas fx:id="canvas" height="512.0" onMouseClicked="#actionClic" width="512.0" BorderPane.alignment="BOTTOM_CENTER" />
    </center>
    <top>
       <GridPane hgap="10.0" BorderPane.alignment="CENTER">
@@ -25,9 +24,9 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnRestart" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Restart" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <TextField fx:id="tfNbMines" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
-            <TextField fx:id="tfTimer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="2" />
+            <Button fx:id="btnRestart" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionReset" text="Restart" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <TextField fx:id="tfNbMines" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+            <TextField fx:id="tfTimer" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="2" />
          </children>
       </GridPane>
    </top>
